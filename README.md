@@ -56,3 +56,7 @@ Black Pearl Solutions is a five-page website built using HTML. It introduces the
 ## Live Website
 
 [Visit Black Pearl Solutions](https://erin-eldho.github.io/five-page-website/)
+
+## Deployment Status
+
+The website has been deployed using GitHub Pages.
