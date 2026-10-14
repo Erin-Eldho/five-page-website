@@ -3,9 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Black Pearl Solutions |\ Contact</title>
-        <meta name="description" content="Contact Black Pearl Solutions to discuss your technology needs and business requirements.">
+        <title>Contact</title>
+        <meta name="description" content="Contact Black Pearl Solutions to discuss your technology 
+        needs and business requirements.">
+        <meta property="og:title" content="Contact">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Contact Black Pearl Solutions to discuss web development, cloud solutions, AI consulting, and your business technology needs.">
+        <meta property="og:url" content="https://example.com/contact.html">
+        <meta property="og:image" content="https://example.com/images/black-pearl-preview.jpg">
+        <meta property="og:site_name" content="Black Pearl Solutions">
     </head>
+
     <body>
         <header>
             <nav aria-label="Main navigation">
@@ -20,6 +28,81 @@
         <main>
             <h1>Contact Us</h1>
             <p>Get in touch with Black Pearl Solutions. We'd love to hear from you.</p>
+
+            <section aria-labelledby="contact-form-heading">
+                <h2 id="contact-form-heading">Send Us a Message</h2>
+
+                <form action="#" method="get">
+                    <p>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name"
+                            autocomplete="name" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email"
+                            autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone"
+                            autocomplete="tel">
+                    </p>
+
+                    <p>
+                        <label for="department">Department:</label>
+                        <select id="department" name="department" required>
+                            <option value="">Select a department</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="cloud-solutions">Cloud Solutions</option>
+                            <option value="ai-consulting">AI Consulting</option>
+                            <option value="general-enquiry">General Enquiry</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message"
+                                rows="6" cols="40" required></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter"
+                            value="yes">
+                        <label for="newsletter">
+                            I would like to receive company news and updates.
+                        </label>
+                    </p>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+            <section aria-labelledby="address-heading">
+                <h2 id="address-heading">Our Location</h2>
+
+                <address>
+                    <strong>Black Pearl Solutions</strong><br>
+                    Wayanad, Kerala, India<br>
+                    Email:
+                    <a href="mailto:blackpearl66@example.com">blackpearl66@example.com</a>
+                </address>
+            </section>
+
+            <section aria-labelledby="map-heading">
+                <h2 id="map-heading">Find Us on the Map</h2>
+
+                <iframe
+                    src="https://maps.google.com/maps?q=Wayanad%2C%20Kerala%2C%20India&output=embed"
+                    title="Google Maps showing Wayanad, Kerala, India"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </section>
         </main>
 
         <footer>
