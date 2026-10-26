@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #722F45;
+    --color-secondary: #38232C;
+    --color-accent: #C58A98;
+    --color-success: #16a34a;
+    --color-warning: #eab308;
+    --color-error: #dc2626;
+    --color-text: #38232C;
+    --color-bg: #F8E8EC;
+
+    --color-primary-lightest: #FCF3F5;
+    --color-primary-light: #E8CDD5;
+    --color-primary-medium: #98566B;
+    --color-primary-dark: #5A2437;
+    --color-primary-darkest: #38232C;
+
+    --primary-hex: #722F45;
+    --primary-rgb: rgb(114, 47, 69);
+    --primary-hsl: hsl(342, 42%, 32%);
+    --primary-oklch: oklch(0.405 0.091 3);
+
+    --color-surface: #FFFFFF;
+    --color-border: #E8CDD5;
+    --color-recommended: #F8E8EC;
+    --font-family: Arial, sans-serif;
+
+    --color-nav-text: #FFFFFF;
+    --color-button-text: #FFFFFF;
+    --color-footer-text: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #5A2437;
+        --color-secondary: #E8CDD5;
+        --color-accent: #C58A98;
+        --color-success: #4ade80;
+        --color-warning: #fde047;
+        --color-error: #f87171;
+        --color-text: #F8E8EC;
+        --color-bg: #24151B;
+
+        --color-primary-lightest: #38232C;
+        --color-primary-light: #5A2437;
+        --color-primary-medium: #98566B;
+        --color-primary-dark: #E8CDD5;
+        --color-primary-darkest: #180D11;
+
+        --color-surface: #38232C;
+        --color-border: #98566B;
+        --color-recommended: #5A2437;
+
+        --color-nav-text: #FFFFFF;
+        --color-button-text: #FFFFFF;
+        --color-footer-text: #F8E8EC;
+    }
+}
+
+html[data-theme="dark"] {
+    --color-primary: #5A2437;
+    --color-secondary: #E8CDD5;
+    --color-accent: #C58A98;
+    --color-success: #4ade80;
+    --color-warning: #fde047;
+    --color-error: #f87171;
+    --color-text: #F8E8EC;
+    --color-bg: #24151B;
+
+    --color-primary-lightest: #38232C;
+    --color-primary-light: #5A2437;
+    --color-primary-medium: #98566B;
+    --color-primary-dark: #E8CDD5;
+    --color-primary-darkest: #180D11;
+
+    --color-surface: #38232C;
+    --color-border: #98566B;
+    --color-recommended: #5A2437;
+
+    --color-nav-text: #FFFFFF;
+    --color-button-text: #FFFFFF;
+    --color-footer-text: #F8E8EC;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.6rem;
+}

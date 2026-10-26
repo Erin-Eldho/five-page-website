@@ -1,0 +1,75 @@
+main > section:first-child {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #FFFFFF;
+    background:
+        linear-gradient(
+            rgba(56, 35, 44, 0.78),
+            rgba(56, 35, 44, 0.78)
+        ),
+        linear-gradient(135deg, #722F45, #38232C);
+    border-radius: 0.8rem;
+}
+
+main > section:first-child h1 {
+    color: #FFFFFF;
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+main > section:first-child p {
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+main > section:first-child a {
+    display: inline-block;
+    padding: 1rem 1.6rem;
+    border-radius: 0.5rem;
+    background-color: #FFFFFF;
+    color: #38232C;
+    text-decoration: none;
+}
+
+main > section:first-child a:hover,
+main > section:first-child a:focus-visible {
+    text-decoration: underline;
+}
+
+main > section {
+    margin-bottom: 4rem;
+}
+
+main > section h2 {
+    margin-bottom: 2rem;
+}
+
+main > section:nth-child(2) {
+    padding: 2rem 0;
+}
+
+main > section:nth-child(3) {
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    main > section:first-child {
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section:first-child {
+        min-height: 70vh;
+        padding: 3rem 1.5rem;
+    }
+
+    main > section:first-child h1 {
+        font-size: 2.8rem;
+    }
+}
