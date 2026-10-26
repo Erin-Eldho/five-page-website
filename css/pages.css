@@ -1,4 +1,4 @@
-main > section:first-child {
+main > section[aria-labelledby="hero-heading"] {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,18 +16,18 @@ main > section:first-child {
     border-radius: 0.8rem;
 }
 
-main > section:first-child h1 {
+main > section[aria-labelledby="hero-heading"] h1 {
     color: #FFFFFF;
     font-size: 3.6rem;
     margin-bottom: 2rem;
 }
 
-main > section:first-child p {
+main > section[aria-labelledby="hero-heading"] p {
     max-width: 700px;
     margin-bottom: 2rem;
 }
 
-main > section:first-child a {
+main > section[aria-labelledby="hero-heading"] a {
     display: inline-block;
     padding: 1rem 1.6rem;
     border-radius: 0.5rem;
@@ -36,8 +36,8 @@ main > section:first-child a {
     text-decoration: none;
 }
 
-main > section:first-child a:hover,
-main > section:first-child a:focus-visible {
+main > section[aria-labelledby="hero-heading"] a:hover,
+main > section[aria-labelledby="hero-heading"] a:focus-visible {
     text-decoration: underline;
 }
 
@@ -49,27 +49,133 @@ main > section h2 {
     margin-bottom: 2rem;
 }
 
-main > section:nth-child(2) {
-    padding: 2rem 0;
-}
-
+main > section:nth-child(2),
 main > section:nth-child(3) {
     padding: 2rem 0;
 }
 
+main > section[aria-labelledby="services-heading"] {
+    padding: 3rem 0;
+}
+
+main > section[aria-labelledby="services-heading"] h1 {
+    margin-bottom: 1.5rem;
+}
+
+main > section[aria-labelledby="services-heading"] p {
+    max-width: 800px;
+}
+
+.comparison {
+    max-width: 100%;
+    margin: 4rem 0;
+}
+
+.comparison h2 {
+    margin-bottom: 2rem;
+}
+
+.comparison table {
+    width: 100%;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 4rem 0;
+    padding: 3rem 2rem;
+    background-color: var(--color-accent);
+    color: #38232C;
+    border-radius: 0.8rem;
+}
+
+.cta > div {
+    flex: 1 1 250px;
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+    color: #38232C;
+}
+
+.cta p {
+    color: #38232C;
+}
+
+.cta form {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 350px;
+}
+
+.cta label {
+    color: #38232C;
+    font-weight: bold;
+}
+
+.cta input {
+    width: 100%;
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    font: inherit;
+}
+
+.cta button {
+    padding: 1rem 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #180D11;
+    color: #FFFFFF;
+    font: inherit;
+    cursor: pointer;
+}
+
+.cta button:hover,
+.cta button:focus-visible {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
-    main > section:first-child {
+    main > section[aria-labelledby="hero-heading"] {
         min-height: 80vh;
+    }
+
+    .cta {
+        align-items: stretch;
     }
 }
 
 @media (max-width: 480px) {
-    main > section:first-child {
+    main > section[aria-labelledby="hero-heading"] {
         min-height: 70vh;
         padding: 3rem 1.5rem;
     }
 
-    main > section:first-child h1 {
+    main > section[aria-labelledby="hero-heading"] h1 {
         font-size: 2.8rem;
+    }
+
+    .comparison {
+        overflow-x: auto;
+    }
+
+    .comparison table {
+        min-width: 600px;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem 1.5rem;
+    }
+
+    .cta form {
+        max-width: none;
     }
 }
