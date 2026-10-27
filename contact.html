@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
         <meta name="description" content="Contact Black Pearl Solutions to discuss your technology 
         needs and business requirements.">
         <meta property="og:title" content="Contact">
@@ -12,6 +11,9 @@
         <meta property="og:url" content="https://example.com/contact.html">
         <meta property="og:image" content="https://example.com/images/black-pearl-preview.jpg">
         <meta property="og:site_name" content="Black Pearl Solutions">
+        <title>Contact</title>
+        <link rel="stylesheet" href="../../phase-1-week-2/day_6/mrng/design-system.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
 
     <body>
@@ -36,19 +38,19 @@
                     <p>
                         <label for="name">Full Name:</label>
                         <input type="text" id="name" name="name"
-                            autocomplete="name" required>
+                            autocomplete="name" placeholder=" " required>
                     </p>
 
                     <p>
                         <label for="email">Email Address:</label>
                         <input type="email" id="email" name="email"
-                            autocomplete="email" required>
+                            autocomplete="email" placeholder=" " required>
                     </p>
 
                     <p>
                         <label for="phone">Phone Number:</label>
                         <input type="tel" id="phone" name="phone"
-                            autocomplete="tel">
+                            autocomplete="tel" placeholder=" ">
                     </p>
 
                     <p>
@@ -65,7 +67,7 @@
                     <p>
                         <label for="message">Your Message:</label>
                         <textarea id="message" name="message"
-                                rows="6" cols="40" required></textarea>
+                                rows="6" cols="40" placeholder=" " required></textarea>
                     </p>
 
                     <p>
@@ -94,14 +96,16 @@
             <section aria-labelledby="map-heading">
                 <h2 id="map-heading">Find Us on the Map</h2>
 
-                <iframe
-                    src="https://maps.google.com/maps?q=Wayanad%2C%20Kerala%2C%20India&output=embed"
-                    title="Google Maps showing Wayanad, Kerala, India"
-                    width="600"
-                    height="450"
-                    loading="lazy"
-                    allowfullscreen>
-                </iframe>
+                <div class="map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Wayanad%2C%20Kerala%2C%20India&output=embed"
+                        title="Google Maps showing Wayanad, Kerala, India"
+                        width="600"
+                        height="450"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </section>
         </main>
 

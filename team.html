@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Team</title>
         <meta name="description" content="Meet the talented professionals at Black Pearl Solutions.">
         <meta property="og:title" content="Team">
         <meta property="og:type" content="website">
@@ -11,6 +10,9 @@
         <meta property="og:url" content="https://example.com/team.html">
         <meta property="og:image" content="https://example.com/images/black-pearl-preview.jpg">
         <meta property="og:site_name" content="Black Pearl Solutions">
+        <title>Team</title>
+        <link rel="stylesheet" href="../../phase-1-week-2/day_6/mrng/design-system.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
         <header>
@@ -27,10 +29,15 @@
             <h1>Meet Our Team</h1>
             <p>Discover the talented professionals behind Black Pearl Solutions.</p>
 
-            <section aria-labelledby="engineering-heading">
+            <nav class="department-filters" aria-label="Team departments">
+                <a href="#engineering-heading">Engineering and Technology</a>
+                <a href="#business-heading">Business and Operations</a>
+            </nav>
+
+            <section class="team-grid" aria-labelledby="engineering-heading">
                 <h2 id="engineering-heading">Engineering and Technology</h2>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 1</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member1/300/300"
@@ -42,7 +49,7 @@
                     <p>Leads technical strategy and guides the development of reliable digital solutions.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 2</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member2/300/300"
@@ -54,7 +61,7 @@
                     <p>Develops and maintains web applications that address business requirements.</p>
                 </article>
 
-                 <article>
+                <article class="team-card">
                     <h3>Team Member 3</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member3/300/300"
@@ -66,7 +73,7 @@
                     <p>Builds clear and accessible interfaces for websites and web applications.</p>
                 </article>
 
-                 <article>
+                <article class="team-card">
                     <h3>Team Member 4</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member4/300/300"
@@ -78,7 +85,7 @@
                     <p>Works on application logic, APIs, and data processing systems.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 5</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member5/300/300"
@@ -90,7 +97,7 @@
                     <p>Supports cloud infrastructure, deployment, and scalable application hosting.</p>
                 </article>
 
-                 <article>
+                <article class="team-card">
                     <h3>Team Member 6</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member6/300/300"
@@ -103,10 +110,10 @@
                 </article>
             </section>
 
-             <section aria-labelledby="business-heading">
+            <section class="team-grid" aria-labelledby="business-heading">
                 <h2 id="business-heading">Business and Operations</h2>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 7</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member7/300/300"
@@ -118,7 +125,7 @@
                     <p>Coordinates daily operations and helps teams deliver projects efficiently.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 8</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member8/300/300"
@@ -130,7 +137,7 @@
                     <p>Plans project activities, tracks progress, and coordinates team communication.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 9</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member9/300/300"
@@ -142,7 +149,7 @@
                     <p>Studies business requirements and translates them into actionable project needs.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 10</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member10/300/300"
@@ -154,7 +161,7 @@
                     <p>Communicates company services and supports marketing campaigns.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 11</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member11/300/300"
@@ -166,7 +173,7 @@
                     <p>Maintains client communication and helps address customer requirements.</p>
                 </article>
 
-                <article>
+                <article class="team-card">
                     <h3>Team Member 12</h3>
                     <figure>
                         <img src="https://picsum.photos/seed/member12/300/300"

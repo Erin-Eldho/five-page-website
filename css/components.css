@@ -1,3 +1,4 @@
+/* Home page */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -53,6 +54,7 @@ cite {
     font-size: 1.4rem;
 }
 
+/* Services page */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -145,6 +147,88 @@ cite {
     color: #FFFFFF;
 }
 
+/* Team page */
+.department-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.department-filters a {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 2rem;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.department-filters a:hover,
+.department-filters a:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-nav-text);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.team-grid > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.team-card {
+    min-width: 0;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-top: 3px solid transparent;
+    border-radius: 0.8rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--color-accent);
+}
+
+.team-card h3 {
+    margin-bottom: 1rem;
+}
+
+.team-card figure {
+    margin: 1rem 0;
+}
+
+.team-card img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-card figcaption {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.team-card p {
+    margin-bottom: 1rem;
+}
+
+/* Tablet */
 @media (max-width: 768px) {
     .features-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -153,8 +237,13 @@ cite {
     .service-grid {
         grid-template-columns: 1fr;
     }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
     .features-grid {
         grid-template-columns: 1fr;
@@ -170,14 +259,30 @@ cite {
         font-size: 1.3rem;
         overflow-wrap: anywhere;
     }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .department-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .department-filters a {
+        text-align: center;
+    }
 }
 
+/* Respective reduced-motion preferences of each page*/
 @media (prefers-reduced-motion: reduce) {
-    .service-card {
+    .service-card,
+    .team-card {
         transition: none;
     }
 
-    .service-card:hover {
+    .service-card:hover,
+    .team-card:hover {
         transform: none;
     }
 }
