@@ -26,13 +26,14 @@ header nav a[aria-current="page"] {
     font-weight: bold;
 }
 
+/* Footer used by other pages */
+body > footer:not(.site-footer) a {
+    color: var(--color-footer-text);
+}
+
 header nav a:hover,
 header nav a:focus-visible {
     text-decoration: underline;
-}
-
-body:has(.site-footer) header nav {
-    gap: 2.5rem;
 }
 
 body:has(.site-footer) header nav a {
@@ -57,10 +58,6 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 2rem;
-}
-
-/* Page-entry animation */
-main {
     animation: page-entry 0.5s ease-out;
 }
 
@@ -86,10 +83,6 @@ body > footer:not(.site-footer) {
     color: var(--color-footer-text);
     text-align: center;
     padding: 4rem 2rem;
-}
-
-body > footer:not(.site-footer) a {
-    color: var(--color-footer-text);
 }
 
 /* About page: footer */
@@ -132,6 +125,19 @@ body > footer:not(.site-footer) a {
     color: var(--color-primary-light);
 }
 
+/* Keep the social-link base rule before more-specific hover rules. */
+.site-footer .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    border: 1px solid var(--color-primary-medium);
+    border-radius: 50%;
+    color: var(--color-surface);
+    text-decoration: none;
+}
+
 .site-footer .footer-column a,
 .site-footer .legal-links a {
     color: var(--color-primary-light);
@@ -150,18 +156,6 @@ body > footer:not(.site-footer) a {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-}
-
-.site-footer .social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.6rem;
-    height: 3.6rem;
-    border: 1px solid var(--color-primary-medium);
-    border-radius: 50%;
-    color: var(--color-surface);
-    text-decoration: none;
 }
 
 .site-footer .social-icons a:hover,
@@ -189,14 +183,14 @@ body > footer:not(.site-footer) a {
     gap: 2rem;
 }
 
-@media (max-width: 899px) {
+@media (width <= 899px) {
     .site-footer .footer-brand,
     .site-footer .footer-column {
         flex: 1 1 calc(50% - 1.5rem);
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     header {
         padding: 1.5rem;
     }
@@ -210,7 +204,7 @@ body > footer:not(.site-footer) a {
     }
 }
 
-@media (max-width: 599px) {
+@media (width <= 599px) {
     .site-footer {
         padding: 3rem 2rem 0;
     }
@@ -226,7 +220,7 @@ body > footer:not(.site-footer) a {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     header {
         padding: 1.2rem;
     }

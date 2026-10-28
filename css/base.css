@@ -15,26 +15,22 @@
     --color-error: #dc2626;
     --color-text: #38232C;
     --color-bg: #F8E8EC;
-
     --color-primary-lightest: #FCF3F5;
     --color-primary-light: #E8CDD5;
     --color-primary-medium: #98566B;
     --color-primary-dark: #5A2437;
     --color-primary-darkest: #38232C;
-
     --primary-hex: #722F45;
-    --primary-rgb: rgb(114, 47, 69);
-    --primary-hsl: hsl(342, 42%, 32%);
-    --primary-oklch: oklch(0.405 0.091 3);
-
-    --color-surface: #FFFFFF;
+    --primary-rgb: rgb(114 47 69);
+    --primary-hsl: hsl(342deg 42% 32%);
+    --primary-oklch: oklch(40.5% 0.091 3deg);
+    --color-surface: #FFF;
     --color-border: #E8CDD5;
     --color-recommended: #F8E8EC;
-    --font-family: Arial, sans-serif;
-
-    --color-nav-text: #FFFFFF;
-    --color-button-text: #FFFFFF;
-    --color-footer-text: #FFFFFF;
+    --font-family: arial, sans-serif;
+    --color-nav-text: #FFF;
+    --color-button-text: #FFF;
+    --color-footer-text: #FFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,19 +43,16 @@
         --color-error: #f87171;
         --color-text: #F8E8EC;
         --color-bg: #24151B;
-
         --color-primary-lightest: #38232C;
         --color-primary-light: #5A2437;
         --color-primary-medium: #98566B;
         --color-primary-dark: #E8CDD5;
         --color-primary-darkest: #180D11;
-
         --color-surface: #38232C;
         --color-border: #98566B;
         --color-recommended: #5A2437;
-
-        --color-nav-text: #FFFFFF;
-        --color-button-text: #FFFFFF;
+        --color-nav-text: #FFF;
+        --color-button-text: #FFF;
         --color-footer-text: #F8E8EC;
     }
 }
@@ -73,19 +66,16 @@ html[data-theme="dark"] {
     --color-error: #f87171;
     --color-text: #F8E8EC;
     --color-bg: #24151B;
-
     --color-primary-lightest: #38232C;
     --color-primary-light: #5A2437;
     --color-primary-medium: #98566B;
     --color-primary-dark: #E8CDD5;
     --color-primary-darkest: #180D11;
-
     --color-surface: #38232C;
     --color-border: #98566B;
     --color-recommended: #5A2437;
-
-    --color-nav-text: #FFFFFF;
-    --color-button-text: #FFFFFF;
+    --color-nav-text: #FFF;
+    --color-button-text: #FFF;
     --color-footer-text: #F8E8EC;
 }
 
@@ -130,22 +120,4 @@ textarea {
 
 a {
     overflow-wrap: anywhere;
-}
-
-/* Interactive element states */
-a:hover,
-a:focus-visible {
-    text-decoration: underline;
-}
-
-button:hover {
-    filter: brightness(0.9);
-}
-
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-    outline: 3px solid var(--color-accent);
-    outline-offset: 2px;
 }
