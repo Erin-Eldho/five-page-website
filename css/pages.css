@@ -1,40 +1,33 @@
 /* Home page */
 main > section[aria-labelledby="hero-heading"] {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 2rem;
-    color: #FFFFFF;
-    background:
-        linear-gradient(
-            rgba(56, 35, 44, 0.78),
-            rgba(56, 35, 44, 0.78)
-        ),
-        linear-gradient(135deg, #722F45, #38232C);
-    border-radius: 0.8rem;
+    min-height: auto;
+    display: block;
+    text-align: left;
+    padding: 3rem;
+    color: var(--color-text);
+    background-color: var(--color-primary-lightest);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 main > section[aria-labelledby="hero-heading"] h1 {
-    color: #FFFFFF;
+    color: var(--color-text);
     font-size: 3.6rem;
     margin-bottom: 2rem;
 }
 
 main > section[aria-labelledby="hero-heading"] p {
-    max-width: 700px;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
 }
 
 main > section[aria-labelledby="hero-heading"] a {
     display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
     padding: 1rem 1.6rem;
     border-radius: 0.5rem;
-    background-color: #FFFFFF;
-    color: #38232C;
-    text-decoration: none;
 }
 
 main > section[aria-labelledby="hero-heading"] a:hover,
@@ -53,57 +46,36 @@ main > section h2 {
 
 main > section:nth-child(2),
 main > section:nth-child(3) {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 /* About page */
 main > section[aria-labelledby="about-heading"] {
-    padding: 3rem 0;
+    padding: 2rem 0 1rem;
 }
 
-main > section[aria-labelledby="about-heading"] p {
-    max-width: 800px;
+main > section[aria-labelledby="about-heading"] h1 {
+    margin-bottom: 1.5rem;
 }
 
 main > section[aria-labelledby="history-heading"] dl {
-    display: grid;
-    grid-template-columns: minmax(180px, 1fr) 2fr;
-    gap: 1.5rem 2rem;
+    display: block;
 }
 
 main > section[aria-labelledby="history-heading"] dt {
     font-weight: bold;
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 main > section[aria-labelledby="history-heading"] dd {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 main > section[aria-labelledby="mission-heading"] blockquote {
-    max-width: 800px;
     padding: 2rem;
     border-left: 3px solid var(--color-accent);
     background-color: var(--color-surface);
     border-radius: 0.5rem;
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-}
-
-.values-grid article {
-    padding: 2rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.8rem;
-    background-color: var(--color-primary-lightest);
-    color: var(--color-text);
-}
-
-.values-grid h3 {
-    margin-bottom: 1rem;
 }
 
 main > section[aria-labelledby="company-contact-heading"] address {
@@ -115,9 +87,47 @@ main > section[aria-labelledby="company-contact-heading"] address a {
     overflow-wrap: anywhere;
 }
 
+body:has(.site-footer) main > section:nth-child(2),
+body:has(.site-footer) main > section:nth-child(3) {
+    padding: 0;
+}
+
+body:has(.site-footer) main section {
+    margin-bottom: 3.5rem;
+}
+
+body:has(.site-footer) main h1 {
+    color: var(--color-text);
+}
+
+body:has(.site-footer) main h2 {
+    color: var(--color-primary);
+}
+
+body:has(.site-footer) main dl dt {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+body:has(.site-footer) main dl dd {
+    margin: 0.5rem 0 0;
+}
+
+body:has(.site-footer) main blockquote {
+    margin: 0;
+    padding: 2rem;
+    border-left: 4px solid var(--color-accent);
+    background-color: var(--color-primary-lightest);
+}
+
+body:has(.site-footer) main address {
+    font-style: normal;
+}
+
 /* Services page */
 main > section[aria-labelledby="services-heading"] {
-    padding: 3rem 0;
+    padding: 3rem 0 1rem;
 }
 
 main > section[aria-labelledby="services-heading"] h1 {
@@ -374,10 +384,6 @@ main > section[aria-labelledby="address-heading"] address a {
 
 /* Tablet */
 @media (max-width: 768px) {
-    main > section[aria-labelledby="hero-heading"] {
-        min-height: 80vh;
-    }
-
     .cta {
         align-items: stretch;
     }
@@ -386,16 +392,11 @@ main > section[aria-labelledby="address-heading"] address a {
 /* Mobile */
 @media (max-width: 480px) {
     main > section[aria-labelledby="hero-heading"] {
-        min-height: 70vh;
         padding: 3rem 1.5rem;
     }
 
     main > section[aria-labelledby="hero-heading"] h1 {
         font-size: 2.8rem;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
     }
 
     .comparison {
@@ -423,14 +424,7 @@ main > section[aria-labelledby="address-heading"] address a {
 
 /* Respective reduced-motion preferences of each page*/
 @media (prefers-reduced-motion: reduce) {
-    .service-card,
-    .team-card,
     main > section[aria-labelledby="contact-form-heading"] form label {
         transition: none;
-    }
-
-    .service-card:hover,
-    .team-card:hover {
-        transform: none;
     }
 }

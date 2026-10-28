@@ -116,3 +116,18 @@ h3 {
 p {
     font-size: 1.6rem;
 }
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
