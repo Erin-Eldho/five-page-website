@@ -17,8 +17,19 @@
     </head>
 
     <body>
-        <header>
-            <nav aria-label="Main navigation">
+        <header class="navbar">
+            <button
+                type="button"
+                id="nav-toggle"
+                class="hamburger"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mobile-nav"
+            >
+                &#9776;
+            </button>
+
+            <nav id="mobile-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
@@ -28,6 +39,7 @@
                     Dark mode
                 </button>
             </nav>
+            <div id="nav-overlay"></div>
         </header>
 
         <main>
@@ -118,5 +130,7 @@
             <p>&copy; 2026 Black Pearl Solutions. All rights reserved.</p>
             <p><a href="contact.html">Contact us</a></p>
         </footer>
+        
+        <script src="../../phase-1-week-3/day_10/task_8/mobile_nav.js"></script>
     </body>
 </html>

@@ -26,6 +26,10 @@ header nav a[aria-current="page"] {
     font-weight: bold;
 }
 
+#nav-overlay {
+    display: none;
+}
+
 /* Footer used by other pages */
 body > footer:not(.site-footer) a {
     color: var(--color-footer-text);
@@ -74,7 +78,7 @@ body > footer:not(.site-footer) {
 /* About page: footer */
 .site-footer {
     padding: 4rem 3rem 0;
-    color: white;
+    color: var(--color-footer-text);
     background-color: var(--color-primary-darkest);
 }
 
@@ -187,6 +191,41 @@ body > footer:not(.site-footer) {
 
     main {
         padding: 2rem 1.5rem;
+    }
+
+    header nav#mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        width: min(80vw, 30rem);
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 8rem 2rem 2rem;
+        background-color: var(--color-primary);
+        overflow-y: auto;
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    header nav#mobile-nav.open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    #nav-overlay.open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
