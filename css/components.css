@@ -16,6 +16,19 @@
 }
 
 /* Home page */
+main section h2,
+.features-grid article {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+main section h2.visible,
+.features-grid article.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -321,6 +334,13 @@ blockquote footer {
 
 /* Respective reduced-motion preferences of each page */
 @media (prefers-reduced-motion: reduce) {
+    main section h2,
+    .features-grid article {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
     .service-card,
     .team-card {
         transition: none;
