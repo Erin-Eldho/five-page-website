@@ -178,6 +178,93 @@ body:has(.site-footer) main address {
     font-style: normal;
 }
 
+/* GitHub profile viewer */
+.github-section {
+    margin-top: 3rem;
+}
+
+.github-search {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.github-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+}
+
+.github-search button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-button-text);
+    cursor: pointer;
+    font: inherit;
+}
+
+#github-error {
+    color: var(--color-error);
+}
+
+.github-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background-color: var(--color-primary-lightest);
+}
+
+.github-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.github-repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.github-repo-card {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    overflow-wrap: anywhere;
+}
+
+.github-repo-card h4 {
+    margin-top: 0;
+}
+
+.github-language {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 1rem;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-darkest);
+    font-size: 0.85rem;
+}
+
+#github-result[hidden] {
+    display: none;
+}
+
 /* Services page */
 .comparison {
     margin: 4rem 0;
@@ -468,6 +555,17 @@ main > section[aria-labelledby="address-heading"] address {
 @media (width <= 768px) {
     .cta {
         align-items: stretch;
+    }
+}
+
+@media (max-width: 600px) {
+    .github-search {
+        flex-direction: column;
+    }
+
+    .github-profile {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 

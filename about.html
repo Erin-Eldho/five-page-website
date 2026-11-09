@@ -127,6 +127,34 @@
                     <a href="mailto:blackpearl66@example.com">blackpearl66@example.com</a>
                 </address>
             </section>
+
+            <section class="github-section" aria-labelledby="github-heading">
+                <h2 id="github-heading">GitHub Profile Viewer</h2>
+                <form id="github-form">
+                    <label for="github-username">GitHub Username</label>
+                    <div class="github-search">
+                        <input type="text" id="github-username" placeholder="Enter GitHub username" required>
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+
+                <p id="github-status" role="status" aria-live="polite"></p>
+                <p id="github-error" role="alert"></p>
+                <div id="github-result" hidden>
+                    <div class="github-profile">
+                        <img id="github-avatar" alt="" width="120" height="120">
+                        <div>
+                            <h3 id="github-name"></h3>
+                            <p id="github-bio"></p>
+                            <p id="github-location"></p>
+                            <p id="github-followers"></p>
+                            <p id="github-following"></p>
+                        </div>
+                    </div>
+                    <h3>Top Repositories</h3>
+                    <div id="github-repos" class="github-repos"></div>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
@@ -175,5 +203,6 @@
             </div>
         </footer>
         <script src="../../phase-1-week-3/day_11/task_8/mobile_nav.js"></script>
+        <script src="../../phase-1-week-3/day_14/task_6/github_profile.js"></script>
     </body>
 </html>
