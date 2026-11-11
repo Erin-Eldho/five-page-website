@@ -551,6 +551,26 @@ main > section[aria-labelledby="address-heading"] address {
     border: 0;
 }
 
+/* Gallery page */
+.gallery {
+    width: min(100% - 4rem, 120rem);
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.gallery > h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.gallery > section {
+    margin-bottom: 4rem;
+}
+
+.gallery > section h2 {
+    margin-bottom: 2rem;
+}
+
 /* Tablet */
 @media (width <= 768px) {
     .cta {
