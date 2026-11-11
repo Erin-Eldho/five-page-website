@@ -4,10 +4,16 @@ import { initAccordion } from "./components/accordion.js";
 import { initGitHubProfile } from "./github_profile.js";
 import { initServicesSearch } from "./services_search.js";
 import { initGalleryLightbox } from "./gallery_lightbox.js";
+import { initScrollAnimations } from "./scroll_animations.js";
 
 // Initialize shared components
 initMobileNav();
 initDarkMode();
+
+// Initialize Home page functionality
+if (document.querySelector(".features-grid")) {
+    initScrollAnimations();
+}
 
 // Initialize About page functionality
 if (document.getElementById("github-form")) {
