@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <header>
+            <button
+                type="button"
+                id="nav-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mobile-nav"
+            >
+                &#9776;
+            </button>
+
+            <nav id="mobile-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html" aria-current="page">Gallery</a>
+
+                <button type="button" id="dark-mode-toggle" aria-pressed="false">
+                    Dark mode
+                </button>
+            </nav>
+
+            <div id="nav-overlay"></div>
+        </header>
+        
+        <main>
+            <section class="gallery">
+                <h1>My Image Gallery</h1>
+                <section>
+                    <h2>Nature and Landscapes</h2>
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=N"
+                            alt="A scenic outdoor landscape">
+                        <figcaption>Beautiful landscapes showcase the beauty of nature.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=E"
+                            alt="Trees and greenery in an outdoor environment">
+                        <figcaption>Green spaces provide habitats for wildlife.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=J"
+                            alt="A wide view extending toward the horizon">
+                        <figcaption>Wide landscapes offer peaceful sightseeing experiences.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=A"
+                            alt="Natural surroundings with different textures">
+                        <figcaption>Natural patterns and colors make each environment unique.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <!-- Decorative image: used only for visual decoration and conveys no essential information. -->
+                        <img src="https://picsum.photos/400/300?random=K" alt="">
+                        <figcaption>A decorative image complementing the nature section.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>Cities and Architecture</h2>
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=P"
+                            alt="Buildings arranged along an urban street">
+                        <figcaption>City streets connect homes, businesses, and public spaces.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=V"
+                            alt="Architectural details on a constructed building">
+                        <figcaption>Architecture reflects creativity and engineering.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=D"
+                            alt="An urban environment viewed from a distance">
+                        <figcaption>City views show how buildings shape urban life.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=S"
+                            alt="A structure surrounded by its environment">
+                        <figcaption>Buildings serve different purposes within a community.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=I"
+                            alt="A street-level view of an urban area">
+                        <figcaption>Public streets connect people with shops and services.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>Everyday Life and Details</h2>
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=R"
+                            alt="A collection of everyday objects">
+                        <figcaption>Everyday objects reflect people's habits and interests.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=F"
+                            alt="A close-up view highlighting surface textures">
+                        <figcaption>Close-up photography reveals small details.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=T"
+                            alt="Activity taking place in everyday surroundings">
+                        <figcaption>Daily activities show how people interact with their surroundings.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/400/300?random=C"
+                            alt="A scene containing varied colors and shapes">
+                        <figcaption>Colors and shapes add visual interest to familiar scenes.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <!-- Decorative image: included only as a visual accent and adds no essential information. -->
+                        <img src="https://picsum.photos/400/300?random=M" alt="">
+                        <figcaption>A decorative image completing the gallery.</figcaption>
+                    </figure>
+                </section>
+
+                <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+                    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+                        &times;
+                    </button>
+                    <button type="button" class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+                        &#10094;
+                    </button>
+                    <div class="lightbox-content">
+                        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+                        <p class="lightbox-caption" id="lightbox-caption"></p>
+                    </div>
+                    <button type="button" class="lightbox-next" id="lightbox-next" aria-label="Next image"> 
+                        &#10095;
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Black Pearl Solutions. All rights reserved.</p>
+            <a href="contact.html">Contact us</a>
+        </footer>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

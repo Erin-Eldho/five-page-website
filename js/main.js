@@ -3,6 +3,7 @@ import { initDarkMode } from "./components/darkMode.js";
 import { initAccordion } from "./components/accordion.js";
 import { initGitHubProfile } from "./github_profile.js";
 import { initServicesSearch } from "./services_search.js";
+import { initGalleryLightbox } from "./gallery_lightbox.js";
 
 // Initialize shared components
 initMobileNav();
@@ -17,4 +18,9 @@ if (document.getElementById("github-form")) {
 if (document.getElementById("service-search")) {
     initServicesSearch();
     initAccordion();
+}
+
+// Initialize Gallery page functionality
+if (document.getElementById("lightbox")) {
+    initGalleryLightbox();
 }
