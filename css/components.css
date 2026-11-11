@@ -197,6 +197,45 @@ blockquote footer {
     color: #FFF;
 }
 
+.faq .accordion {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.faq .accordion-item {
+    border-bottom: 1px solid var(--color-primary-medium);
+}
+
+.faq .accordion-item h3 {
+    margin: 0;
+}
+
+.faq .accordion-toggle {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    background-color: var(--color-primary-light);
+    color: var(--color-text);
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.faq .accordion-toggle:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: -3px;
+}
+
+.faq .accordion-content {
+    padding: 1.5rem;
+    background-color: var(--color-primary-lightest);
+}
+
+.faq .accordion-content[hidden] {
+    display: none;
+}
+
 /* Team page */
 .department-filters {
     display: flex;
