@@ -1,6 +1,7 @@
 import { initMobileNav } from "./components/nav.js";
 import { initDarkMode } from "./components/darkMode.js";
 import { initAccordion } from "./components/accordion.js";
+import { initBackToTop } from "./components/backToTop.js";
 import { initGitHubProfile } from "./github_profile.js";
 import { initServicesSearch } from "./services_search.js";
 import { initGalleryLightbox } from "./gallery_lightbox.js";
@@ -12,6 +13,7 @@ import { initBlogReading } from "./progress_bar.js";
 // Initialize shared components
 initMobileNav();
 initDarkMode();
+initBackToTop();
 
 // Initialize Home page functionality
 if (document.querySelector(".features-grid")) {
