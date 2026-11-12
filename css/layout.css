@@ -1,4 +1,4 @@
-header {
+body > header.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -6,7 +6,7 @@ header {
     padding: 2rem;
 }
 
-header nav {
+body > header.navbar nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,13 +14,13 @@ header nav {
     gap: 2.5rem;
 }
 
-header nav a {
+body > header.navbar nav a {
     color: var(--color-nav-text);
     text-decoration: none;
 }
 
 /* Active navigation link */
-header nav a[aria-current="page"] {
+body > header.navbar nav a[aria-current="page"] {
     text-decoration: underline;
     text-underline-offset: 0.4rem;
     font-weight: bold;
@@ -35,8 +35,8 @@ body > footer:not(.site-footer) a {
     color: var(--color-footer-text);
 }
 
-header nav a:hover,
-header nav a:focus-visible {
+body > header.navbar nav a:hover
+body > header.navbar nav a:focus-visible {
     text-decoration: underline;
 }
 
@@ -181,11 +181,11 @@ body > footer:not(.site-footer) {
 }
 
 @media (width <= 768px) {
-    header {
+    body > header.navbar {
         padding: 1.5rem;
     }
 
-    header nav {
+    body > header.navbar nav {
         gap: 1.5rem;
     }
 
@@ -193,7 +193,7 @@ body > footer:not(.site-footer) {
         padding: 2rem 1.5rem;
     }
 
-    header nav#mobile-nav {
+    body > header.navbar nav#mobile-nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -215,7 +215,7 @@ body > footer:not(.site-footer) {
         transition: transform 0.3s ease, visibility 0.3s ease;
     }
 
-    header nav#mobile-nav.open {
+    body > header.navbar nav#mobile-nav.open {
         transform: translateX(0);
         visibility: visible;
     }
@@ -246,15 +246,15 @@ body > footer:not(.site-footer) {
 }
 
 @media (width <= 480px) {
-    header {
+    body > header.navbar {
         padding: 1.2rem;
     }
 
-    header nav {
+    body > header.navbar nav {
         gap: 1rem;
     }
 
-    header nav a {
+    body > header.navbar nav a {
         font-size: 1.4rem;
     }
 }

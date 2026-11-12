@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Read articles about HTML, web accessibility, and web development from Black Pearl Solutions.">
+        <meta property="og:title" content="Blog">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Read articles about HTML, web accessibility, and web development from Black Pearl Solutions.">
+        <meta property="og:url" content="https://example.com/blog.html">
+        <meta property="og:image" content="https://example.com/images/black-pearl-preview.jpg">
+        <meta property="og:site_name" content="Black Pearl Solutions">
+        <title>Blog</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div id="reading-progress" aria-hidden="true"></div>
+        <header class="navbar">
+            <button type="button" id="nav-toggle" class="hamburger" aria-label="Open navigation" 
+            aria-expanded="false" aria-controls="mobile-nav">
+                &#9776;
+            </button>
+
+            <nav id="mobile-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="blog.html" aria-current="page">Blog</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+
+                <button type="button" id="dark-mode-toggle" aria-pressed="false">
+                    Dark mode
+                </button>
+            </nav>
+            <div id="nav-overlay"></div>
+        </header>
+
+        <div class="content-layout">
+            <main>
+                <h1>Latest Articles</h1>
+                <article id="article1">
+                    <header>
+                        <h2>Introduction to HTML</h2>
+                        <time datetime="2026-10-01">October 1, 2026</time>
+                    </header>
+                    <section>
+                        <p>HTML stands for HyperText Markup Language. It is used to create the structure of web pages using elements and tags.</p>
+                        <p>It provides headings, paragraphs, links, images, and other elements that organize website content.</p>
+                    </section>
+                    <footer>
+                        <span>Author: J.K Rowling</span>
+                        <a href="/category/html">HTML</a>
+                    </footer>
+                </article>
+
+                <article id="article2">
+                    <header>
+                        <h2>Importance of Web Accessibility</h2>
+                        <time datetime="2026-10-03">October 3, 2026</time>
+                    </header>
+                    <section>
+                        <p>Web accessibility ensures that websites can be used by people with different abilities.</p>
+                        <p>Semantic HTML, descriptive links, keyboard navigation, and alternative text help make websites more accessible.</p>
+                    </section>
+                    <footer>
+                        <span>Author: Kamala Das</span>
+                        <a href="/category/accessibility">Accessibility</a>
+                    </footer>
+                </article>
+
+                <article id="article3">
+                    <header>
+                        <h2>Getting Started with Web Development</h2>
+                        <time datetime="2026-10-05">October 5, 2026</time>
+                    </header>
+                    <section>
+                        <p>Web development involves creating and maintaining websites using technologies such as HTML, CSS, and JavaScript.</p>
+                        <p>Beginners can start by learning HTML structure, then move on to styling with CSS and adding interactivity with JavaScript.</p>
+                    </section>
+                    <footer>
+                        <span>Author: Alex Brown</span>
+                        <a href="/category/web-development">Web Development</a>
+                    </footer>
+                </article>
+
+                <section class="comments-section" data-article-id="blog" aria-labelledby="comments-heading">
+                    <h2 id="comments-heading">Comments</h2>
+                    <form class="comment-form">
+                        <label for="comment-name">Name</label>
+                        <input type="text" id="comment-name" name="name" required>
+                        <label for="comment-text">Comment</label>
+                        <textarea id="comment-text" name="comment" rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                    <div class="comments-list"></div>
+                </section>
+
+                <section id="infinite-feed" aria-labelledby="feed-heading">
+                    <h2 id="feed-heading">More Articles</h2>
+                    <div id="blog-feed"></div>
+                    <div id="feed-loading" class="feed-loading" hidden>
+                        <div class="feed-spinner"></div>
+                        <p>Loading posts...</p>
+                    </div>
+                    <div id="feed-error" hidden>
+                        <p id="feed-error-message" role="alert"></p>
+                        <button type="button" id="feed-retry">Retry</button>
+                    </div>
+                    <p id="feed-end" hidden>End of feed</p>
+                    <div id="feed-sentinel"></div>
+                </section>
+            </main>
+
+            <aside>
+                <nav aria-label="Blog sidebar">
+                    <section>
+                        <h2>Recent Posts</h2>
+                        <ul>
+                            <li><a href="#article1">Introduction to HTML</a></li>
+                            <li><a href="#article2">Importance of Web Accessibility</a></li>
+                            <li><a href="#article3">Getting Started with Web Development</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Categories</h2>
+                        <ul>
+                            <li><a href="#article1">HTML</a></li>
+                            <li><a href="#article2">Accessibility</a></li>
+                            <li><a href="#article3">Web Development</a></li>
+                        </ul>
+                    </section>
+                </nav>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Black Pearl Solutions. All rights reserved.</p>
+            <a href="contact.html">Contact us</a>
+        </footer>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>
