@@ -9,6 +9,7 @@ import { initScrollAnimations } from "./scroll_animations.js";
 import { initBlogComments } from "./blog.js";
 import { initInfiniteScroll } from "./infinite_scroll.js";
 import { initBlogReading } from "./progress_bar.js";
+import { initContactForm } from "./form_validator.js";
 
 // Initialize shared components
 initMobileNav();
@@ -18,6 +19,13 @@ initBackToTop();
 // Initialize Home page functionality
 if (document.querySelector(".features-grid")) {
     initScrollAnimations();
+}
+
+// Initialize Blog page functionality
+if (document.getElementById("reading-progress")) {
+    initBlogReading();
+    initBlogComments();
+    initInfiniteScroll();
 }
 
 // Initialize About page functionality
@@ -31,14 +39,12 @@ if (document.getElementById("service-search")) {
     initAccordion();
 }
 
+// Initialize Contact page functionality
+if (document.getElementById("contact-form")) {
+    initContactForm();
+}
+
 // Initialize Gallery page functionality
 if (document.getElementById("lightbox")) {
     initGalleryLightbox();
-}
-
-// Initialize Blog page functionality
-if (document.getElementById("reading-progress")) {
-    initBlogReading();
-    initBlogComments();
-    initInfiniteScroll();
 }

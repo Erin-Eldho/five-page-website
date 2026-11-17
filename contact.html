@@ -51,46 +51,49 @@
 
             <section aria-labelledby="contact-form-heading">
                 <h2 id="contact-form-heading">Send Us a Message</h2>
-
-                <form action="#" method="get">
+                <form id="contact-form" action="#" method="get" novalidate>
                     <p>
                         <label for="name">Full Name:</label>
-                        <input type="text" id="name" name="name"
-                            autocomplete="name" placeholder=" " required>
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder=" " 
+                        minlength="2" required aria-describedby="name-error">
+                        <span class="field-error" id="name-error" role="alert" hidden></span>
                     </p>
 
                     <p>
                         <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email"
-                            autocomplete="email" placeholder=" " required>
+                        <input type="email" id="email" name="email" autocomplete="email" 
+                        placeholder=" " required aria-describedby="email-error">
+                        <span class="field-error" id="email-error" role="alert" hidden></span>
                     </p>
 
                     <p>
                         <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone"
-                            autocomplete="tel" placeholder=" ">
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder=" " 
+                        pattern="[+]?[0-9 ()-]{7,20}" aria-describedby="phone-error">
+                        <span class="field-error" id="phone-error" role="alert" hidden></span>
                     </p>
 
                     <p>
                         <label for="department">Department:</label>
-                        <select id="department" name="department" required>
+                        <select id="department" name="department" required aria-describedby="department-error">
                             <option value="">Select a department</option>
                             <option value="web-development">Web Development</option>
                             <option value="cloud-solutions">Cloud Solutions</option>
                             <option value="ai-consulting">AI Consulting</option>
                             <option value="general-enquiry">General Enquiry</option>
                         </select>
+                        <span class="field-error" id="department-error" role="alert" hidden></span>
                     </p>
 
                     <p>
                         <label for="message">Your Message:</label>
-                        <textarea id="message" name="message"
-                                rows="6" cols="40" placeholder=" " required></textarea>
+                        <textarea id="message" name="message" rows="6" cols="40" placeholder=" " 
+                        minlength="20" required aria-describedby="message-error"></textarea>
+                        <span class="field-error" id="message-error" role="alert" hidden></span>
                     </p>
 
                     <p>
-                        <input type="checkbox" id="newsletter" name="newsletter"
-                            value="yes">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
                         <label for="newsletter">
                             I would like to receive company news and updates.
                         </label>

@@ -323,6 +323,29 @@ blockquote footer {
     color: var(--color-primary-dark);
 }
 
+/* Toast notification */
+#toast {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 1100;
+    padding: 1.2rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary-darkest);
+    color: var(--color-footer-text);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+#toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 /* Gallery page */
 .lightbox {
     position: fixed;
@@ -691,6 +714,10 @@ blockquote footer {
     }
 
     #back-to-top {
+        transition: none;
+    }
+
+    #toast {
         transition: none;
     }
 }

@@ -45,12 +45,6 @@ main > section[aria-labelledby="hero-heading"] {
     box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
 }
 
-main > section[aria-labelledby="hero-heading"] h1 {
-    color: var(--color-text);
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
-}
-
 main > section[aria-labelledby="hero-heading"] p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
@@ -283,7 +277,7 @@ body:has(.site-footer) main address {
     gap: 2rem;
     margin: 4rem 0;
     padding: 3rem 2rem;
-    background-color: var(--color-accent);
+    background-color: var(--color-primary-medium);
     color: var(--color-primary-darkest);
     border-radius: 0.8rem;
 }
@@ -509,16 +503,22 @@ main > section[aria-labelledby="contact-form-heading"] form > p:has(input[type="
     gap: 1rem;
 }
 
-main > section[aria-labelledby="contact-form-heading"] input:required:valid,
-main > section[aria-labelledby="contact-form-heading"] select:required:valid,
-main > section[aria-labelledby="contact-form-heading"] textarea:required:valid {
+main > section[aria-labelledby="contact-form-heading"] :is(input, select, textarea)[aria-invalid="false"]:not([name="phone"]) {
     border: 2px solid var(--color-success);
 }
 
-main > section[aria-labelledby="contact-form-heading"] input:required:invalid:not(:focus, :placeholder-shown),
-main > section[aria-labelledby="contact-form-heading"] select:required:invalid,
-main > section[aria-labelledby="contact-form-heading"] textarea:required:invalid:not(:focus, :placeholder-shown) {
+main > section[aria-labelledby="contact-form-heading"] :is(input, select, textarea)[aria-invalid="true"] {
     border: 2px solid var(--color-error);
+}
+
+main > section[aria-labelledby="contact-form-heading"] .field-error {
+    display: block;
+    color: var(--color-error);
+    font-size: 1.3rem;
+}
+
+main > section[aria-labelledby="contact-form-heading"] .field-error[hidden] {
+    display: none;
 }
 
 main > section[aria-labelledby="contact-form-heading"] button[type="submit"] {
@@ -534,6 +534,11 @@ main > section[aria-labelledby="contact-form-heading"] button[type="submit"] {
 main > section[aria-labelledby="contact-form-heading"] button[type="submit"]:hover,
 main > section[aria-labelledby="contact-form-heading"] button[type="submit"]:focus-visible {
     text-decoration: underline;
+}
+
+main > section[aria-labelledby="contact-form-heading"] button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: wait;
 }
 
 main > section[aria-labelledby="address-heading"] address {
@@ -613,11 +618,6 @@ main > section[aria-labelledby="address-heading"] address {
 
 .content-layout main > section[aria-labelledby="blog-heading"] > article + article {
     margin-top: 3rem;
-}
-
-.content-layout main > h1 {
-    margin: 0;
-    color: var(--color-primary);
 }
 
 .content-layout article {
