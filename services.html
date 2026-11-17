@@ -13,7 +13,6 @@
         <meta property="og:site_name" content="Black Pearl Solutions">
         <title>Services</title>
         <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="../../phase-1-week-2/day_9/eve/print.css" media="print">
     </head>
     <body>
         <header class="navbar">
@@ -57,6 +56,13 @@
                 <label for="service-search">Search Services</label>
                 <div class="service-search-controls">
                     <input type="search" id="service-search" placeholder="Search for a service">
+                    <label for="service-category">Category</label>
+                    <select id="service-category">
+                        <option value="">All Categories</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Cloud Solutions">Cloud Solutions</option>
+                        <option value="AI & Automation">AI & Automation</option>
+                    </select>
                     <button type="button" id="clear-search" hidden> &times; </button>
                 </div>
                 <p id="no-results" hidden>No results found</p>
@@ -65,62 +71,14 @@
             <section class="service-grid" aria-labelledby="service-list-heading">
                 <h2 id="service-list-heading">What We Offer</h2>
 
-                <article class="service-card">
-                    <h2>Web Development</h2>
-                    <p>
-                        We design and develop responsive websites and web
-                        applications that deliver useful, accessible, and
-                        engaging experiences across devices.
-                    </p>
+                <p id="service-loading" role="status" hidden>
+                    Loading services...
+                </p>
 
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Responsive website layouts</li>
-                        <li>Accessible and semantic HTML structures</li>
-                        <li>Interactive web application development</li>
-                        <li>Website testing and maintenance</li>
-                    </ul>
-
-                    <a href="contact.html">Discuss Your Web Project</a>
-                </article>
-
-                <article class="service-card">
-                    <h2>Cloud Solutions</h2>
-                    <p>
-                        We help businesses use cloud technologies to improve
-                        scalability, support reliable operations, and manage
-                        digital resources efficiently.
-                    </p>
-
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Cloud infrastructure planning</li>
-                        <li>Application deployment support</li>
-                        <li>Scalable hosting solutions</li>
-                        <li>Cloud resource optimization</li>
-                    </ul>
-
-                    <a href="contact.html">Discuss Your Cloud Needs</a>
-                </article>
-
-                <article class="service-card">
-                    <h2>AI Consulting</h2>
-                    <p>
-                        We help organizations identify practical opportunities
-                        to use artificial intelligence and automation in their
-                        business workflows.
-                    </p>
-
-                    <h3>Features</h3>
-                    <ul>
-                        <li>AI use-case identification</li>
-                        <li>Workflow automation planning</li>
-                        <li>Data-driven solution recommendations</li>
-                        <li>AI project planning and guidance</li>
-                    </ul>
-
-                    <a href="contact.html">Discuss Your AI Project</a>
-                </article>
+                <div id="service-error" hidden>
+                    <p id="service-error-message" role="alert"></p>
+                    <button type="button" id="service-retry">Retry</button>
+                </div>
             </section>
 
             <section class="comparison" aria-labelledby="comparison-heading">
@@ -287,10 +245,10 @@
 
                 <form>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
 
                     <button type="submit">Contact Us</button>
                 </form>

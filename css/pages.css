@@ -364,6 +364,57 @@ body:has(.site-footer) main address {
     color: var(--color-error);
 }
 
+.service-search-controls {
+    flex-wrap: wrap;
+}
+
+#service-search {
+    flex: 1 1 30rem;
+}
+
+#service-category {
+    min-width: 18rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+}
+
+#service-loading {
+    grid-column: 1 / -1;
+    color: var(--color-primary);
+}
+
+#service-loading[hidden],
+#service-error[hidden] {
+    display: none;
+}
+
+#service-error {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+#service-error-message {
+    color: var(--color-error);
+}
+
+#service-retry {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-button-text);
+    font: inherit;
+    cursor: pointer;
+}
+
 .highlight {
     background-color: var(--color-warning);
     color: var(--color-primary-darkest);
