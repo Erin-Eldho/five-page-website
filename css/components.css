@@ -156,38 +156,12 @@ blockquote footer {
     gap: 1.5rem;
 }
 
-.service-skeleton .skeleton-line {
-    display: block;
-    width: 100%;
-    height: 1.4rem;
-    border-radius: 0.4rem;
-    background: linear-gradient(
-        90deg,
-        var(--color-primary-lightest) 25%,
-        var(--color-border) 50%,
-        var(--color-primary-lightest) 75%
-    );
-    background-size: 200% 100%;
-    animation: service-skeleton-loading 1.2s ease-in-out infinite;
-}
-
-.service-skeleton .skeleton-title {
-    width: 70%;
-    height: 2.4rem;
-}
-
 .service-skeleton .skeleton-line:nth-child(3) {
     width: 90%;
 }
 
 .service-skeleton .skeleton-line:nth-child(4) {
     width: 75%;
-}
-
-@keyframes service-skeleton-loading {
-    to {
-        background-position: -200% 0;
-    }
 }
 
 .service-card a {
@@ -274,28 +248,57 @@ blockquote footer {
     display: none;
 }
 
+/* Common skeleton loading for services and team pages */
+.service-skeleton .skeleton-line,
+.team-skeleton .skeleton-line {
+    display: block;
+    width: 100%;
+    height: 1.4rem;
+    border-radius: 0.4rem;
+    background: linear-gradient(
+        90deg,
+        var(--color-primary-lightest) 25%,
+        var(--color-border) 50%,
+        var(--color-primary-lightest) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.2s ease-in-out infinite;
+}
+
+.service-skeleton .skeleton-title,
+.team-skeleton .skeleton-title {
+    width: 70%;
+    height: 2.4rem;
+}
+
+@keyframes skeleton-loading {
+    to {
+        background-position: -200% 0;
+    }
+}
+
 /* Team page */
 .department-filters {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 2rem 0 3rem;
 }
 
-.department-filters a {
-    display: inline-block;
-    padding: 0.8rem 1.4rem;
-    border: 1px solid var(--color-primary);
-    border-radius: 2rem;
-    color: var(--color-primary);
-    text-decoration: none;
+.department-filters label {
+    font-weight: bold;
 }
 
-.department-filters a:hover,
-.department-filters a:focus-visible {
-    background-color: var(--color-primary);
-    color: var(--color-nav-text);
+.department-filters select {
+    min-width: 25rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
 }
 
 .team-grid {
@@ -355,10 +358,53 @@ blockquote footer {
 
 .team-card p {
     margin-bottom: 1rem;
+    overflow-wrap: anywhere;
 }
 
 .team-card p:first-of-type {
     color: var(--color-primary-dark);
+}
+
+#team-loading,
+#team-error,
+#team-no-results {
+    grid-column: 1 / -1;
+}
+
+#team-loading {
+    color: var(--color-primary);
+}
+
+#team-error[hidden] {
+    display: none;
+}
+
+#team-error {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#team-error-message {
+    color: var(--color-error);
+}
+
+#team-retry {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-button-text);
+    font: inherit;
+    cursor: pointer;
+}
+
+.team-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
 }
 
 /* Toast notification */
@@ -722,10 +768,6 @@ blockquote footer {
         flex-direction: column;
         align-items: stretch;
     }
-
-    .department-filters a {
-        text-align: center;
-    }
 }
 
 /* Respective reduced-motion preferences of each page */
@@ -747,7 +789,8 @@ blockquote footer {
         transform: none;
     }
 
-    .service-skeleton .skeleton-line {
+    .service-skeleton .skeleton-line,
+    .team-skeleton .skeleton-line {
         animation: none;
     }
 

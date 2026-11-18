@@ -10,6 +10,7 @@ import { initBlogComments } from "./blog.js";
 import { initInfiniteScroll } from "./infinite_scroll.js";
 import { initBlogReading } from "./progress_bar.js";
 import { initContactForm } from "./form_validator.js";
+import { initTeamPage } from "./team.js";
 
 // Initialize shared components
 initMobileNav();
@@ -38,6 +39,9 @@ if (document.getElementById("service-search")) {
     initServicesSearch();
     initAccordion();
 }
+
+// Initialize Team page functionality
+initTeamPage();
 
 // Initialize Contact page functionality
 if (document.getElementById("contact-form")) {
