@@ -11,6 +11,7 @@ import { initInfiniteScroll } from "./infinite_scroll.js";
 import { initBlogReading } from "./progress_bar.js";
 import { initContactForm } from "./form_validator.js";
 import { initTeamPage } from "./team.js";
+import { initLatestPosts } from "./home_latest.js";
 
 // Initialize shared components
 initMobileNav();
@@ -20,6 +21,7 @@ initBackToTop();
 // Initialize Home page functionality
 if (document.querySelector(".features-grid")) {
     initScrollAnimations();
+    initLatestPosts();
 }
 
 // Initialize Blog page functionality

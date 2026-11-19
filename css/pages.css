@@ -80,6 +80,7 @@ main > section:nth-child(3) {
 
 main > section[aria-labelledby="features-heading"] h2,
 main > section[aria-labelledby="testimonials-heading"] h2,
+main > section[aria-labelledby="latest-news-heading"] h2,
 main > section[aria-labelledby="comparison-heading"] h2 {
     color: var(--color-primary);
 }

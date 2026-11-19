@@ -113,6 +113,18 @@
                     </article>
                 </div>
             </section>
+
+            <section class="latest-news" aria-labelledby="latest-news-heading">
+                <h2 id="latest-news-heading">Latest News</h2>
+                <p id="latest-loading" role="status" hidden>
+                    Loading latest posts...
+                </p>
+                <div id="latest-error" hidden>
+                    <p id="latest-error-message" role="alert"></p>
+                    <button type="button" id="latest-retry">Retry</button>
+                </div>
+                <div id="latest-news-grid" class="latest-news-grid"></div>
+            </section>
         </main>
 
         <footer>
