@@ -1,4 +1,4 @@
-const STATIC_CACHE = "black-pearl-static-v1";
+const STATIC_CACHE = "black-pearl-static-v2";
 const API_CACHE = "black-pearl-api-v1";
 
 const PRECACHE_URLS = [
@@ -41,9 +41,13 @@ const PRECACHE_URLS = [
     "./images/homepage.png",
     "./images/homepage1.png",
     "./favicon.ico",
+    "./images/android-chrome-192x192.png",
+    "./images/android-chrome-512x512.png",
 
     // Service worker script
-    "./sw.js"
+    "./sw.js",
+
+    "./manifest.json",
 ];
 
 // Install event: precache all static resources

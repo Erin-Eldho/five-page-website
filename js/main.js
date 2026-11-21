@@ -68,3 +68,54 @@ if ("serviceWorker" in navigator) {
         }
     });
 }
+
+// Show custom PWA install button when installation is available
+function initPWAInstall() {
+    let deferredInstallPrompt = null;
+    const installButton = document.createElement("button");
+    installButton.type = "button";
+    installButton.id = "install-app";
+    installButton.className = "install-app-button";
+    installButton.textContent = "Install App";
+    installButton.hidden = true;
+    const navigation = document.getElementById("mobile-nav");
+
+    if (navigation) {
+        navigation.appendChild(installButton);
+    } else {
+        document.body.appendChild(installButton);
+    }
+
+    // Listen for the installation prompt
+    window.addEventListener("beforeinstallprompt", event => {
+        event.preventDefault();
+        deferredInstallPrompt = event;
+        installButton.hidden = false;
+        console.log("PWA installation is available.");
+    });
+
+    // Show the browser installation prompt
+    installButton.addEventListener("click", async () => {
+        if (!deferredInstallPrompt) {
+            return;
+        }
+        const promptEvent = deferredInstallPrompt;
+        deferredInstallPrompt = null;
+        try {
+            const result = await promptEvent.prompt();
+            console.log("Install prompt outcome:", result.outcome);
+        } catch (error) {
+            console.error("Installation prompt failed:", error);
+        }
+        installButton.hidden = true;
+    });
+
+    // Hide button after successful installation
+    window.addEventListener("appinstalled", () => {
+        deferredInstallPrompt = null;
+        installButton.hidden = true;
+        console.log("Black Pearl Solutions installed successfully.");
+    });
+}
+
+initPWAInstall();

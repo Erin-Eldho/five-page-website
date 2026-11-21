@@ -1,0 +1,22 @@
+{
+    "name": "Black Pearl Solutions",
+    "short_name": "Black Pearl",
+    "description": "Technology solutions for web development, cloud services, and AI consulting.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "theme_color": "#722F45",
+    "background_color": "#F8E8EC",
+    "icons": [
+        {
+            "src": "./images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
